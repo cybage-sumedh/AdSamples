@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp-WSFDemo", "WebApp-WS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp-WSFederation-DotNet", "WebApp-WSFederation-DotNet\WebApp-WSFederation-DotNet.csproj", "{D4960069-0AB5-42D5-B711-722681DBCA0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAdSample", "AzureAdSample\AzureAdSample.csproj", "{335E1B32-3DE0-4CFE-9518-407AF7ACF756}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AzureAdSampleWithCore", "AzureAdSampleWithCore\AzureAdSampleWithCore.xproj", "{03F6DCB6-BACC-4F17-847D-27E5D0C2041B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{D4960069-0AB5-42D5-B711-722681DBCA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4960069-0AB5-42D5-B711-722681DBCA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4960069-0AB5-42D5-B711-722681DBCA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335E1B32-3DE0-4CFE-9518-407AF7ACF756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335E1B32-3DE0-4CFE-9518-407AF7ACF756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335E1B32-3DE0-4CFE-9518-407AF7ACF756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335E1B32-3DE0-4CFE-9518-407AF7ACF756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F6DCB6-BACC-4F17-847D-27E5D0C2041B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F6DCB6-BACC-4F17-847D-27E5D0C2041B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F6DCB6-BACC-4F17-847D-27E5D0C2041B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F6DCB6-BACC-4F17-847D-27E5D0C2041B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

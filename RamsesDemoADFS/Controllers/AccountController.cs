@@ -24,17 +24,44 @@ using System.Web.Mvc;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.WsFederation;
 using Microsoft.Owin.Security;
+using System.Security.Claims;
+using System.Threading;
+using RamsesDemoADFS.Helpers;
 
 namespace RamsesDemoADFS.Controllers
 {
     public class AccountController : Controller
     {
+
+        //[ValidateAntiForgeryToken]
         public void SignIn()
         {
             // Send a WSFederation sign-in request.
             if (!Request.IsAuthenticated)
             {
                 HttpContext.GetOwinContext().Authentication.Challenge(new AuthenticationProperties { RedirectUri = "/" }, WsFederationAuthenticationDefaults.AuthenticationType);
+
+                ////is this a new session
+                //if (HttpContext.Session != null && HttpContext.Session.IsNewSession)
+                //{
+                //    const string issuer = "urn:net-desktop";
+
+                //    var identity = new ClaimsIdentity(
+                //      new List<Claim>
+                //      {
+                //        new Claim(ClaimTypes.Email, User.Identity.GetEmail(), ClaimValueTypes.String, issuer)
+                //      },
+                //      "Cookie",
+                //      ClaimTypes.Email,
+                //      ClaimTypes.Role
+                //      );
+                //    var ctx = HttpContext.Request.GetOwinContext();
+                //    ctx.Authentication.SignIn(identity);
+                //}
+            }
+            else
+            {
+                
             }
         }
         public void SignOut()
@@ -42,6 +69,9 @@ namespace RamsesDemoADFS.Controllers
             // Send a WSFederation sign-out request.
             HttpContext.GetOwinContext().Authentication.SignOut(
                 WsFederationAuthenticationDefaults.AuthenticationType, CookieAuthenticationDefaults.AuthenticationType);
+
+            var ctx = Request.GetOwinContext();
+            ctx.Authentication.SignOut("Cookie");
         }
 	}
 }
